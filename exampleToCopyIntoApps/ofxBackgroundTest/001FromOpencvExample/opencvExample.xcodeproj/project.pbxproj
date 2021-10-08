@@ -4,4 +4,9 @@
 	classes = {
 	};
 	objectVersion = 46;
-	obje
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0b2e55fee13134ce9b57d3bffd6d5dab /* ofxCvShortImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8a4dd23693dfab8ec05faa5d62c49d8c /* ofxCvShortImage.cpp */; };
+		134078e8f8f4f24368b31f26166fec03 /* ofxCvGrayscaleImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 057122a817d12571f8c0c7a4d522b879 /* ofxCvGrayscaleImage.cpp */; };
+		259da76c028adaa20996723e102a6ccd /* ofxCvColorImage.cpp in Sources */ = {
