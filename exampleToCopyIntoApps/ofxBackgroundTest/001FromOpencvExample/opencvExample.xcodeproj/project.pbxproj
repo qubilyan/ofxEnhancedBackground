@@ -12,4 +12,7 @@
 		259da76c028adaa20996723e102a6ccd /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ce9c7160245b19131dae61282ee6cb53 /* ofxCvColorImage.cpp */; };
 		5D563D4A14B328C800DBA0F6 /* cv_yuv_codebook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D563D4214B328C800DBA0F6 /* cv_yuv_codebook.cpp */; };
 		5D563D4B14B328C800DBA0F6 /* ofxBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D563D4414B328C800DBA0F6 /* ofxBackground.cpp */; };
-		5D563D4C14B328C800DBA0F6 /* ofxBackgroundCvColorImage.cpp in Sources 
+		5D563D4C14B328C800DBA0F6 /* ofxBackgroundCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D563D4614B328C800DBA0F6 /* ofxBackgroundCvColorImage.cpp */; };
+		7829c785a0dd56718cb46bcc3b066ff1 /* ofxCvHaarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9a16cbf2e8cfe43af54fe6f55efbf8a4 /* ofxCvHaarFinder.cpp */; };
+		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXB
