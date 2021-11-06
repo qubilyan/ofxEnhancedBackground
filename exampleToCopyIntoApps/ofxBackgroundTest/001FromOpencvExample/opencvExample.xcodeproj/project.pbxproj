@@ -72,4 +72,7 @@
 		516717f84c0146512c47a3ec3f268851 /* ofxCvHaarFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxCvHaarFinder.h; path = ../../../addons/ofxOpenCv/src/ofxCvHaarFinder.h; sourceTree = SOURCE_ROOT; };
 		5D563D4214B328C800DBA0F6 /* cv_yuv_codebook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cv_yuv_codebook.cpp; sourceTree = "<group>"; };
 		5D563D4314B328C800DBA0F6 /* cv_yuv_codebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cv_yuv_codebook.h; sourceTree = "<group>"; };
-		5D563D4414B328C800DBA0F6 /* ofxBackground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path
+		5D563D4414B328C800DBA0F6 /* ofxBackground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBackground.cpp; sourceTree = "<group>"; };
+		5D563D4514B328C800DBA0F6 /* ofxBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBackground.h; sourceTree = "<group>"; };
+		5D563D4614B328C800DBA0F6 /* ofxBackgroundCvColorImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBackgroundCvColorImage.cpp; sourceTree = "<group>"; };
+		5D563D4714B328C800DBA0F
