@@ -70,4 +70,6 @@
 		057122a817d12571f8c0c7a4d522b879 /* ofxCvGrayscaleImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxCvGrayscaleImage.cpp; path = ../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.cpp; sourceTree = SOURCE_ROOT; };
 		3c232045833313b99efe0b14840b6108 /* ofxCvMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxCvMain.h; path = ../../../addons/ofxOpenCv/src/ofxCvMain.h; sourceTree = SOURCE_ROOT; };
 		516717f84c0146512c47a3ec3f268851 /* ofxCvHaarFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxCvHaarFinder.h; path = ../../../addons/ofxOpenCv/src/ofxCvHaarFinder.h; sourceTree = SOURCE_ROOT; };
-		5D563D4214B328C800DBA0F6 /* cv_yuv_codebook.cpp */ = {
+		5D563D4214B328C800DBA0F6 /* cv_yuv_codebook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cv_yuv_codebook.cpp; sourceTree = "<group>"; };
+		5D563D4314B328C800DBA0F6 /* cv_yuv_codebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cv_yuv_codebook.h; sourceTree = "<group>"; };
+		5D563D4414B328C800DBA0F6 /* ofxBackground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path
