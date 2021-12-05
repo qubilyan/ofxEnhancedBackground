@@ -79,4 +79,5 @@
 		603f2267d449084a4187a04928d2d713 /* ofxCvBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxCvBlob.h; path = ../../../addons/ofxOpenCv/src/ofxCvBlob.h; sourceTree = SOURCE_ROOT; };
 		7b6a03390302d5a2c9f0e4ab630ae8d6 /* ofxCvFloatImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxCvFloatImage.cpp; path = ../../../addons/ofxOpenCv/src/ofxCvFloatImage.cpp; sourceTree = SOURCE_ROOT; };
 		8a4dd23693dfab8ec05faa5d62c49d8c /* ofxCvShortImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxCvShortImage.cpp; path = ../../../addons/ofxOpenCv/src/ofxCvShortImage.cpp; sourceTree = SOURCE_ROOT; };
-		8e79cf8911
+		8e79cf8911dfabafe23ea45b335d18dd /* ofxCvConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxCvConstants.h; path = ../../../addons/ofxOpenCv/src/ofxCvConstants.h; sourceTree = SOURCE_ROOT; };
+		9a048549f08c6dffa79e6def6eeedb50 /* ofxCvGrayscaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxCvGrayscaleImage.h; path = ../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.h; sourceTree = SOU
