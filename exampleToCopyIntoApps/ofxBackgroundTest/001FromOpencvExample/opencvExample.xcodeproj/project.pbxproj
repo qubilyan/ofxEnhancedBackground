@@ -164,4 +164,21 @@
 			isa = PBXGroup;
 			children = (
 				5D563D4214B328C800DBA0F6 /* cv_yuv_codebook.cpp */,
-				5D563
+				5D563D4314B328C800DBA0F6 /* cv_yuv_codebook.h */,
+			);
+			path = fromLearningOpenCV;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				5D563D3A14B328C800DBA0F6 /* ofxBackground */,
+				d25ed262554e8f281794adead3c706ad /* ofxOpenCv */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2424410CC5A17004149E2 /
