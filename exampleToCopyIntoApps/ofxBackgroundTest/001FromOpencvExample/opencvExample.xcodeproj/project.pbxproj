@@ -151,4 +151,17 @@
 		5D563D4014B328C800DBA0F6 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				5D563D4114B328C800DBA0F6 /* from
+				5D563D4114B328C800DBA0F6 /* fromLearningOpenCV */,
+				5D563D4414B328C800DBA0F6 /* ofxBackground.cpp */,
+				5D563D4514B328C800DBA0F6 /* ofxBackground.h */,
+				5D563D4614B328C800DBA0F6 /* ofxBackgroundCvColorImage.cpp */,
+				5D563D4714B328C800DBA0F6 /* ofxBackgroundCvColorImage.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		5D563D4114B328C800DBA0F6 /* fromLearningOpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				5D563D4214B328C800DBA0F6 /* cv_yuv_codebook.cpp */,
+				5D563
