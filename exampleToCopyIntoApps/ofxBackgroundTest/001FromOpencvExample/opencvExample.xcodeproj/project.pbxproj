@@ -190,4 +190,20 @@
 				E45BE9740E8CC7DD009D7055 /* Carbon.framework */,
 				E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */,
 				E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */,
-				E45BE9770E8CC7DD
+				E45BE9770E8CC7DD009D7055 /* CoreServices.framework */,
+				E45BE9790E8CC7DD009D7055 /* OpenGL.framework */,
+				E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */,
+			);
+			name = "system frameworks";
+			sourceTree = "<group>";
+		};
+		BBAB23CA13894EDB00AA2426 /* 3rd party frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
+			);
+			name = "3rd party frameworks";
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBX
