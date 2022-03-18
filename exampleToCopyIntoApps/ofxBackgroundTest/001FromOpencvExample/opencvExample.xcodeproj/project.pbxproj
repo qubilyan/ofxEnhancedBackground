@@ -134,4 +134,21 @@
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
 			);
-			runOnly
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D563D3A14B328C800DBA0F6 /* ofxBackground */ = {
+			isa = PBXGroup;
+			children = (
+				5D563D4014B328C800DBA0F6 /* src */,
+			);
+			name = ofxBackground;
+			path = ../../../addons/ofxBackground;
+			sourceTree = "<group>";
+		};
+		5D563D4014B328C800DBA0F6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5D563D4114B328C800DBA0F6 /* from
