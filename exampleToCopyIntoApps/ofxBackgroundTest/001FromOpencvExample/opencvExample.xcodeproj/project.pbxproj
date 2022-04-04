@@ -270,4 +270,18 @@
 				c6151136d101f857dae12722e3c42f4a /* ofxCvImage.cpp */,
 				d847ebe484f4f500f9cf25492c7beddc /* ofxCvImage.h */,
 				9a16cbf2e8cfe43af54fe6f55efbf8a4 /* ofxCvHaarFinder.cpp */,
-				516717f84c0146512c47a3ec3f268851 /* ofxCvHaarFinde
+				516717f84c0146512c47a3ec3f268851 /* ofxCvHaarFinder.h */,
+				3c232045833313b99efe0b14840b6108 /* ofxCvMain.h */,
+				8a4dd23693dfab8ec05faa5d62c49d8c /* ofxCvShortImage.cpp */,
+				dea2edc0afd59176fdedc222f646a8af /* ofxCvShortImage.h */,
+				ce81a5e39eb3c871fdf3d4d531ccdf12 /* ofxOpenCv.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		d25ed262554e8f281794adead3c706ad /* ofxOpenCv */ = {
+			isa = PBXGroup;
+			children = (
+				c756caafd542831674e15fe662490682 /* src */,
+			);
+			name = ofxOp
