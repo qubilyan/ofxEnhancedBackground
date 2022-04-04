@@ -263,4 +263,11 @@
 				8e79cf8911dfabafe23ea45b335d18dd /* ofxCvConstants.h */,
 				c76de5c29bdbd2caa1dd0021a7376220 /* ofxCvContourFinder.cpp */,
 				c1c56d20a1a57dc44096bfe709100d93 /* ofxCvContourFinder.h */,
-				7b6a03390302d5a2c9f0e
+				7b6a03390302d5a2c9f0e4ab630ae8d6 /* ofxCvFloatImage.cpp */,
+				f7269f96ac34a2b44a680d0371903a25 /* ofxCvFloatImage.h */,
+				057122a817d12571f8c0c7a4d522b879 /* ofxCvGrayscaleImage.cpp */,
+				9a048549f08c6dffa79e6def6eeedb50 /* ofxCvGrayscaleImage.h */,
+				c6151136d101f857dae12722e3c42f4a /* ofxCvImage.cpp */,
+				d847ebe484f4f500f9cf25492c7beddc /* ofxCvImage.h */,
+				9a16cbf2e8cfe43af54fe6f55efbf8a4 /* ofxCvHaarFinder.cpp */,
+				516717f84c0146512c47a3ec3f268851 /* ofxCvHaarFinde
