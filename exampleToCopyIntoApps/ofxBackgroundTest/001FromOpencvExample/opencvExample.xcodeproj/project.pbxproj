@@ -386,4 +386,19 @@
 				5D563D4A14B328C800DBA0F6 /* cv_yuv_codebook.cpp in Sources */,
 				5D563D4B14B328C800DBA0F6 /* ofxBackground.cpp in Sources */,
 				5D563D4C14B328C800DBA0F6 /* ofxBackgroundCvColorImage.cpp in Sources */,
-			)
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+		
