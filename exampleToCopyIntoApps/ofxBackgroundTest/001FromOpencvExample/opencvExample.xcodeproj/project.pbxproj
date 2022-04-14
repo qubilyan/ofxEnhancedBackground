@@ -379,4 +379,11 @@
 				259da76c028adaa20996723e102a6ccd /* ofxCvColorImage.cpp in Sources */,
 				d88d764a83ef6141a37bfd8a797dc59d /* ofxCvContourFinder.cpp in Sources */,
 				ac59cecc06d479990bb40dc4b6e8d708 /* ofxCvFloatImage.cpp in Sources */,
-				134078e8f8f4f24368b31f26166fec03 /* ofxCvGra
+				134078e8f8f4f24368b31f26166fec03 /* ofxCvGrayscaleImage.cpp in Sources */,
+				dbf87635ae30aae223f0609e6ee16e2f /* ofxCvImage.cpp in Sources */,
+				7829c785a0dd56718cb46bcc3b066ff1 /* ofxCvHaarFinder.cpp in Sources */,
+				0b2e55fee13134ce9b57d3bffd6d5dab /* ofxCvShortImage.cpp in Sources */,
+				5D563D4A14B328C800DBA0F6 /* cv_yuv_codebook.cpp in Sources */,
+				5D563D4B14B328C800DBA0F6 /* ofxBackground.cpp in Sources */,
+				5D563D4C14B328C800DBA0F6 /* ofxBackgroundCvColorImage.cpp in Sources */,
+			)
