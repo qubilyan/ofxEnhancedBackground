@@ -1,0 +1,10 @@
+<install>
+	<name>ofxBackground</name>
+	<version>0.03</version>
+	<author>joel gethin lewis</author>
+	<url>http://joelgethinlewis.com</url>
+	<requires>ofxOpenCV</requires>
+	
+	<add>
+		
+		<!-- 	========================

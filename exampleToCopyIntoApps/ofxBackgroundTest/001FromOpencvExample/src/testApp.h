@@ -24,4 +24,10 @@ class testApp : public ofBaseApp{
 
 	ofVideoGrabber 		vidGrabber;			//to get a live video image to analyse
 	ofxCvColorImage		colorImg;			//a place to save the live video frame
-	ofxBackground		backgroundAddon;	//the addon that allow
+	ofxBackground		backgroundAddon;	//the addon that allows you to use a variety of methods for background/foreground segmentation
+	bool				bLearnBackground;	//a boolean to indicate whether to instruct the addon to learn the background again, defaults to true
+    // on startup
+
+
+};
+
