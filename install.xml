@@ -7,4 +7,12 @@
 	
 	<add>
 		
-		<!-- 	========================
+		<!-- 	=====================================================================	-->
+		<!--	========================== add per project using this addon =========	-->
+		<!-- 	=====================================================================	-->
+
+		<src>
+			<folder name="addons/ofxBackground/src">
+				<file>../../../addons/ofxBackground/src/ofxBackground.h</file>
+				<file>../../../addons/ofxBackground/src/ofxBackground.cpp</file>
+				<file>../../../addons/ofxBackground/src/ofxBackgro
