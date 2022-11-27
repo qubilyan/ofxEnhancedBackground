@@ -22,4 +22,25 @@ ofxBackground::ofxBackground() {
 	
 	maxMod[0] = 3;  //Set color thresholds to default values
 	minMod[0] = 10;
-	maxMod[
+	maxMod[1] = 1;
+	minMod[1] = 1;
+	maxMod[2] = 1;
+	minMod[2] = 1;
+	scalehigh = HIGH_SCALE_NUM;
+	scalelow = LOW_SCALE_NUM;	
+	
+	bAllocated = false;
+	
+	timeStartedLearning = 0.f;
+	
+	bLearning = false;
+}
+
+	//--------------------------------------------------------------------------------
+ofxBackground::~ofxBackground() {
+	clear();
+	deallocateImages();	//be good
+}
+
+	//--------------------------------------------------------------------------------
+void ofxBackground::allocate( int w, int h ) {
