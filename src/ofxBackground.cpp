@@ -44,3 +44,18 @@ ofxBackground::~ofxBackground() {
 
 	//--------------------------------------------------------------------------------
 void ofxBackground::allocate( int w, int h ) {
+	if (bAllocated == true){
+		ofLog(OF_LOG_WARNING, "in allocate, reallocating a ofxCvImage, within OfxBackground");
+		clear();
+	}
+	
+	inputCopy.allocate(w, h);
+	yuvImage.allocate(w, h);
+	
+	backgroundAverage.allocate(w, h);
+	backgroundAverageConnectedComponents.allocate(w, h);
+    backgroundCodebook.allocate(w, h);
+	backgroundCodeBookConnectedComponents.allocate(w, h);
+	
+		//AVG METHOD ALLOCATION
+	allocateImages(w,h); //redo everything if you change the size
