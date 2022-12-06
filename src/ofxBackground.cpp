@@ -58,4 +58,13 @@ void ofxBackground::allocate( int w, int h ) {
 	backgroundCodeBookConnectedComponents.allocate(w, h);
 	
 		//AVG METHOD ALLOCATION
-	allocateImages(w,h); //redo everything if you change the size
+	allocateImages(w,h); //redo everything if you change the size! and this will be triggered first time round
+	scaleHigh(scalehigh);
+	scaleLow(scalelow);
+	ImaskAVG = cvCreateImage( cvGetSize(inputCopy.getCvImage()), IPL_DEPTH_8U, 1 );
+	ImaskAVGCC = cvCreateImage( cvGetSize(inputCopy.getCvImage()), IPL_DEPTH_8U, 1 );
+	cvSet(ImaskAVG,cvScalar(255));
+		//CODEBOOK METHOD ALLOCATION:
+	yuvImage = cvCloneImage(inputCopy.getCvImage());
+	ImaskCodeBook = cvCreateImage( cvGetSize(inputCopy.getCvImage()), IPL_DEPTH_8U, 1 );
+	ImaskCodeBookCC = cvCre
