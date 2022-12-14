@@ -67,4 +67,18 @@ void ofxBackground::allocate( int w, int h ) {
 		//CODEBOOK METHOD ALLOCATION:
 	yuvImage = cvCloneImage(inputCopy.getCvImage());
 	ImaskCodeBook = cvCreateImage( cvGetSize(inputCopy.getCvImage()), IPL_DEPTH_8U, 1 );
-	ImaskCodeBookCC = cvCre
+	ImaskCodeBookCC = cvCreateImage( cvGetSize(inputCopy.getCvImage()), IPL_DEPTH_8U, 1 );
+	cvSet(ImaskCodeBook,cvScalar(255));
+	imageLen = inputCopy.getCvImage()->width*inputCopy.getCvImage()->height;
+	cB = new codeBook [imageLen];
+	for(int f = 0; f<imageLen; f++)
+	{
+		cB[f].numEntries = 0;
+	}
+	for(int nc=0; nc<nChannels;nc++)
+	{
+		cbBounds[nc] = 10; //Learning bounds factor
+	}
+	ch[0] = true; //Allow threshold setting simultaneously for all channels
+	ch[1] = true;
+	ch[2] =
