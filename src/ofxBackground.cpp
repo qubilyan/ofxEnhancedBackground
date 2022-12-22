@@ -81,4 +81,23 @@ void ofxBackground::allocate( int w, int h ) {
 	}
 	ch[0] = true; //Allow threshold setting simultaneously for all channels
 	ch[1] = true;
-	ch[2] =
+	ch[2] = true;		
+	
+	_width = w;
+	_height = h;
+	bAllocated = true;
+	
+	timeStartedLearning = ofGetElapsedTimeMillis(); //for safetly? TODO: question
+	bStatsDone = false;
+}
+
+	//--------------------------------------------------------------------------------
+void ofxBackground::clear() {
+	
+	if (bAllocated == true){
+		inputCopy.clear();
+		yuvImage.clear(); //yuvImage is for codebook method
+		
+		backgroundAverage.clear();
+		backgroundAverageConnectedComponents.clear();
+		backgrou
