@@ -100,4 +100,22 @@ void ofxBackground::clear() {
 		
 		backgroundAverage.clear();
 		backgroundAverageConnectedComponents.clear();
-		backgrou
+		backgroundCodebook.clear();
+		backgroundCodeBookConnectedComponents.clear();	
+		
+		bAllocated = false;
+	}
+}
+
+void ofxBackground::reset(int w, int h) {
+	clear();
+	deallocateImages();	//be good	
+	allocate(w,h);
+}
+
+void ofxBackground::allocateImages(int w, int h){
+	
+	IavgF = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 3 );
+	IdiffF = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 3 );
+	IprevF = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 3 );
+	IhiF = cvCreateImage( cvSize(w,h), IPL_DEPTH_
