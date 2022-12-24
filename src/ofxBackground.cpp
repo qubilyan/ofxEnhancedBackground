@@ -130,3 +130,18 @@ void ofxBackground::allocateImages(int w, int h){
 	cvZero(IdiffF);
 	cvZero(IprevF);
 	cvZero(IhiF);
+	cvZero(IlowF);		
+	Icount = 0.00001; //Protect against divide by zero
+
+	Iscratch = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 3 );
+	Iscratch2 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 3 );
+	Igray1 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 1 );
+	Igray2 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 1 );
+	Igray3 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 1 );
+	Imaskt = cvCreateImage( cvSize(w,h), IPL_DEPTH_8U, 1 );
+	
+	cvZero(Iscratch);
+	cvZero(Iscratch2);
+}
+
+void of
