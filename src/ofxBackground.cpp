@@ -118,4 +118,15 @@ void ofxBackground::allocateImages(int w, int h){
 	IavgF = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 3 );
 	IdiffF = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 3 );
 	IprevF = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 3 );
-	IhiF = cvCreateImage( cvSize(w,h), IPL_DEPTH_
+	IhiF = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 3 );
+	IlowF = cvCreateImage(cvSize(w,h), IPL_DEPTH_32F, 3 );
+	Ilow1 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 1 );
+	Ilow2 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 1 );
+	Ilow3 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 1 );
+	Ihi1 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 1 );
+	Ihi2 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 1 );
+	Ihi3 = cvCreateImage( cvSize(w,h), IPL_DEPTH_32F, 1 );
+	cvZero(IavgF);
+	cvZero(IdiffF);
+	cvZero(IprevF);
+	cvZero(IhiF);
