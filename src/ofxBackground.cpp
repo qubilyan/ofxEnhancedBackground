@@ -144,4 +144,18 @@ void ofxBackground::allocateImages(int w, int h){
 	cvZero(Iscratch2);
 }
 
-void of
+void ofxBackground::update(ofxCvColorImage& input){
+	float now = ofGetElapsedTimeMillis();
+	
+		// get width/height disregarding ROI
+    IplImage* ipltemp = input.getCvImage();
+    _width = ipltemp->width;
+    _height = ipltemp->height;
+	
+	if( inputCopy.getWidth() == 0 ) {
+		allocate( _width, _height );
+	} else if( inputCopy.getWidth() != _width || inputCopy.getHeight() != _height ) {
+			// reallocate to new size
+		clear();
+		allocate( _width, _height );
+	} else { 
