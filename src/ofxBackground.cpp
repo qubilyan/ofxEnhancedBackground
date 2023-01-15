@@ -158,4 +158,16 @@ void ofxBackground::update(ofxCvColorImage& input){
 			// reallocate to new size
 		clear();
 		allocate( _width, _height );
-	} else { 
+	} else { //don't do anything unless we have allocated! (and therefore set timeStartedLearning to a safe, non zero value)
+		
+		inputCopy = input;
+		inputCopy.setROI( input.getROI() );
+		yuvImage.setROI( input.getROI() ); //pass on ROI'ness
+		
+		yuvImage.setFromPixels(inputCopy.getPixels(), _width, _height);
+		yuvImage.convertRgbToYuv();	
+		
+		if((now-timeStartedLearning) < LEARNING_TIME){
+				//then we should be learning
+				//LEARNING THE AVERAGE AND AVG DIFF BACKGROUND
+	
