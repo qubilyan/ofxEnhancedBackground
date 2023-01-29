@@ -170,4 +170,22 @@ void ofxBackground::update(ofxCvColorImage& input){
 		if((now-timeStartedLearning) < LEARNING_TIME){
 				//then we should be learning
 				//LEARNING THE AVERAGE AND AVG DIFF BACKGROUND
+			accumulateBackground(inputCopy.getCvImage());
+				//LEARNING THE CODEBOOK BACKGROUND
+			pColor = (uchar *)((yuvImage.getCvImage())->imageData);
+			for(int c=0; c<imageLen; c++)
+			{
+				cvupdateCodeBook(pColor, cB[c], cbBounds, nChannels);
+				pColor += 3;
+			}
+			
+				//TODO: clear stale entries
+			
+			bStatsDone = false;
+			bLearning = true;
+		}else {
+				//its either time to do stats or not
+			bLearning = false;
+			if(!bStatsDone){
+					//do the stats, just the once
 	
