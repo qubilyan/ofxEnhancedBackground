@@ -188,4 +188,14 @@ void ofxBackground::update(ofxCvColorImage& input){
 			bLearning = false;
 			if(!bStatsDone){
 					//do the stats, just the once
-	
+				createModelsfromStats(); //create the background model
+                ofNotifyEvent(ofxBackgroundLearningCompleteEvent::events, onLearningComplete);
+                
+				bStatsDone = true;
+			}else {
+					//learn as normal, find the foreground if any
+						//FIND FOREGROUND BY AVG METHOD:
+					backgroundDiff(inputCopy.getCvImage(),ImaskAVG);
+					cvCopy(ImaskAVG,ImaskAVGCC);
+					cvconnectedComponents(ImaskAVGCC);
+						//FIND FOREGROUND BY CODEBOOK M
