@@ -198,4 +198,15 @@ void ofxBackground::update(ofxCvColorImage& input){
 					backgroundDiff(inputCopy.getCvImage(),ImaskAVG);
 					cvCopy(ImaskAVG,ImaskAVGCC);
 					cvconnectedComponents(ImaskAVGCC);
-						//FIND FOREGROUND BY CODEBOOK M
+						//FIND FOREGROUND BY CODEBOOK METHOD
+					uchar maskPixelCodeBook;
+					pColor = (uchar *)((yuvImage.getCvImage())->imageData); //3 channel yuv image
+					uchar *pMask = (uchar *)((ImaskCodeBook)->imageData); //1 channel image
+					for(int c=0; c<imageLen; c++)
+					{
+						maskPixelCodeBook = cvbackgroundDiff(pColor, cB[c], nChannels, minMod, maxMod);
+						*pMask++ = maskPixelCodeBook;
+						pColor += 3;
+					}
+						//This part just to visualize bounding boxes and centers if desired
+					cvCopy(Imas
