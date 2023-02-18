@@ -249,4 +249,16 @@ void ofxBackground::deallocateImages()
 	
 	cvReleaseImage(&ImaskAVG);
 	cvReleaseImage(&ImaskAVGCC);
-	cvReleaseImag
+	cvReleaseImage(&ImaskCodeBook);
+	cvReleaseImage(&ImaskCodeBookCC);
+}
+
+	// Accumulate the background statistics for one more frame
+	// We accumulate the images, the image differences and the count of images for the 
+	//    the routine createModelsfromStats() to work on after we're done accumulating N frames.
+	// I		Background image, 3 channel, 8u
+	// number	Camera number
+void ofxBackground::accumulateBackground(IplImage *I)
+{
+	static int first = 1;
+	cvCvtScale(I,Iscratch,1,0); //To float;
