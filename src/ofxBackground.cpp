@@ -209,4 +209,22 @@ void ofxBackground::update(ofxCvColorImage& input){
 						pColor += 3;
 					}
 						//This part just to visualize bounding boxes and centers if desired
-					cvCopy(Imas
+					cvCopy(ImaskCodeBook,ImaskCodeBookCC);	
+					cvconnectedComponents(ImaskCodeBookCC);				
+				
+					//TODO: update the learned background pixels....
+					//TODO: clear stale codebook entries on a much slower frequency
+			}
+
+		}
+		
+		backgroundAverage = ImaskAVG;
+		backgroundAverageConnectedComponents = ImaskAVGCC;
+		backgroundCodebook = ImaskCodeBook;
+		backgroundCodeBookConnectedComponents = ImaskCodeBookCC;	
+	}
+}
+
+void ofxBackground::deallocateImages()
+{
+	cvReleaseImage(&Iav
