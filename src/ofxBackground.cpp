@@ -227,4 +227,26 @@ void ofxBackground::update(ofxCvColorImage& input){
 
 void ofxBackground::deallocateImages()
 {
-	cvReleaseImage(&Iav
+	cvReleaseImage(&IavgF);
+	cvReleaseImage(&IdiffF);
+	cvReleaseImage(&IprevF);
+	cvReleaseImage(&IhiF);
+	cvReleaseImage(&IlowF);
+	cvReleaseImage(&Ilow1);
+	cvReleaseImage(&Ilow2);
+	cvReleaseImage(&Ilow3);
+	cvReleaseImage(&Ihi1);
+	cvReleaseImage(&Ihi2);
+	cvReleaseImage(&Ihi3);
+	cvReleaseImage(&Iscratch);
+	cvReleaseImage(&Iscratch2);
+	
+	cvReleaseImage(&Igray1  );
+	cvReleaseImage(&Igray2 );
+	cvReleaseImage(&Igray3 );
+	
+	cvReleaseImage(&Imaskt);
+	
+	cvReleaseImage(&ImaskAVG);
+	cvReleaseImage(&ImaskAVGCC);
+	cvReleaseImag
