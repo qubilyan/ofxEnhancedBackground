@@ -277,4 +277,19 @@ void ofxBackground::scaleHigh(float scale)
 {
 	cvConvertScale(IdiffF,Iscratch,scale); //Converts with rounding and saturation
 	cvAdd(Iscratch,IavgF,IhiF);
-	cvCvtPixToPlane( IhiF, Ihi1,Ihi2,Ih
+	cvCvtPixToPlane( IhiF, Ihi1,Ihi2,Ihi3, 0 );
+}
+
+	// Scale the average difference from the average image low acceptance threshold
+void ofxBackground::scaleLow(float scale)
+{
+	cvConvertScale(IdiffF,Iscratch,scale); //Converts with rounding and saturation
+	cvSub(IavgF,Iscratch,IlowF);
+	cvCvtPixToPlane( IlowF, Ilow1,Ilow2, Ilow3, 0 );
+}
+
+	//Once you've learned the background long enough, turn it into a background model
+void ofxBackground::createModelsfromStats()
+{
+	cvConvertScale(IavgF,IavgF,(double)(1.0/Icount));
+	cvConvertSca
