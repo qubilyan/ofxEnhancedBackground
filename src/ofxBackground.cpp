@@ -262,3 +262,19 @@ void ofxBackground::accumulateBackground(IplImage *I)
 {
 	static int first = 1;
 	cvCvtScale(I,Iscratch,1,0); //To float;
+	if (!first){
+		cvAcc(Iscratch,IavgF);
+		cvAbsDiff(Iscratch,IprevF,Iscratch2);
+		cvAcc(Iscratch2,IdiffF);
+		Icount += 1.0;
+	}
+	first = 0;
+	cvCopy(Iscratch,IprevF);
+}
+
+	// Scale the average difference from the average image high acceptance threshold
+void ofxBackground::scaleHigh(float scale)
+{
+	cvConvertScale(IdiffF,Iscratch,scale); //Converts with rounding and saturation
+	cvAdd(Iscratch,IavgF,IhiF);
+	cvCvtPixToPlane( IhiF, Ihi1,Ihi2,Ih
