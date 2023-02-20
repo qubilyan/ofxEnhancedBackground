@@ -292,4 +292,17 @@ void ofxBackground::scaleLow(float scale)
 void ofxBackground::createModelsfromStats()
 {
 	cvConvertScale(IavgF,IavgF,(double)(1.0/Icount));
-	cvConvertSca
+	cvConvertScale(IdiffF,IdiffF,(double)(1.0/Icount));
+	cvAddS(IdiffF,cvScalar(1.0,1.0,1.0),IdiffF);  //Make sure diff is always something
+	scaleHigh(HIGH_SCALE_NUM);
+	scaleLow(LOW_SCALE_NUM);
+}
+
+	// Create a binary: 0,255 mask where 255 means forground pixel
+	// I		Input image, 3 channel, 8u
+	// Imask	mask image to be created, 1 channel 8u
+	// num		camera number.
+	//
+void ofxBackground::backgroundDiff(IplImage *I,IplImage *Imask)  //Mask should be grayscale
+{
+	cvCvtScale(I,Iscratch,1,0); //To floa
