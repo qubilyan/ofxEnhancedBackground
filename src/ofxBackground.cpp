@@ -305,4 +305,19 @@ void ofxBackground::createModelsfromStats()
 	//
 void ofxBackground::backgroundDiff(IplImage *I,IplImage *Imask)  //Mask should be grayscale
 {
-	cvCvtScale(I,Iscratch,1,0); //To floa
+	cvCvtScale(I,Iscratch,1,0); //To float;
+								//Channel 1
+	cvCvtPixToPlane( Iscratch, Igray1,Igray2,Igray3, 0 );
+	cvInRange(Igray1,Ilow1,Ihi1,Imask);
+		//Channel 2
+	cvInRange(Igray2,Ilow2,Ihi2,Imaskt);
+	cvOr(Imask,Imaskt,Imask);
+		//Channel 3
+	cvInRange(Igray3,Ilow3,Ihi3,Imaskt);
+	cvOr(Imask,Imaskt,Imask);
+		//Finally, invert the results
+	cvSubRS( Imask, cvScalar(255), Imask);
+}
+
+	//--------------------------------------------------------------------------------
+void ofxBackground::draw( float x, float y, flo
