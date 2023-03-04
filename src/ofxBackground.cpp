@@ -337,4 +337,16 @@ void ofxBackground::draw( float x, float y, float w, float h ) {
         y -= anchor.y;
     }
 	
-		// ---------------------------- draw the var
+		// ---------------------------- draw the various masks
+	ofSetColor(0xFFFFFF);
+    glPushMatrix();
+    glTranslatef( x, y, 0.0 );
+    glScalef( scalex, scaley, 0.0 );
+	
+	if (bLearning) {
+		backgroundAverage.draw(0,0);
+		ofDrawBitmapString("Average background: LEARNING", 0, _height+10);
+		backgroundAverageConnectedComponents.draw(0, 20+_height);
+		ofDrawBitmapString("Average Connected Components: LEARNING", 0, _height+20+_height+10);
+		backgroundCodebook.draw(_width+20, 0);
+		ofDrawBitmapString("Codebook: LEARNING", _width+
