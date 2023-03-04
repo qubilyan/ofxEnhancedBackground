@@ -349,4 +349,12 @@ void ofxBackground::draw( float x, float y, float w, float h ) {
 		backgroundAverageConnectedComponents.draw(0, 20+_height);
 		ofDrawBitmapString("Average Connected Components: LEARNING", 0, _height+20+_height+10);
 		backgroundCodebook.draw(_width+20, 0);
-		ofDrawBitmapString("Codebook: LEARNING", _width+
+		ofDrawBitmapString("Codebook: LEARNING", _width+20, _height+10);
+		backgroundCodeBookConnectedComponents.draw(_width+20, 20+_height);
+		ofDrawBitmapString("Codebook Connected Components: LEARNING", _width+20, _height+20+_height+10);
+		string timeLeft = ofToString(LEARNING_TIME-(now-timeStartedLearning));
+		ofDrawBitmapString("Learning Time Left: "+timeLeft, 0, _height+20+_height+10+10);
+	}else{
+		backgroundAverage.draw(0,0);
+		ofDrawBitmapString("Average background", 0, _height+10);
+		backgroundAverageConnectedComponents.draw(0, 
