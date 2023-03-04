@@ -320,4 +320,21 @@ void ofxBackground::backgroundDiff(IplImage *I,IplImage *Imask)  //Mask should b
 }
 
 	//--------------------------------------------------------------------------------
-void ofxBackground::draw( float x, float y, flo
+void ofxBackground::draw( float x, float y, float w, float h ) {
+	
+	float now = ofGetElapsedTimeMillis();
+	
+    float scalex = 0.0f;
+    float scaley = 0.0f;
+    if( _width != 0 ) { scalex = w/_width; } else { scalex = 1.0f; }
+    if( _height != 0 ) { scaley = h/_height; } else { scaley = 1.0f; }
+	
+    if(bAnchorIsPct){
+        x -= anchor.x * w;
+        y -= anchor.y * h;
+    }else{
+        x -= anchor.x;
+        y -= anchor.y;
+    }
+	
+		// ---------------------------- draw the var
