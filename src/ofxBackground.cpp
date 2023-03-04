@@ -357,4 +357,14 @@ void ofxBackground::draw( float x, float y, float w, float h ) {
 	}else{
 		backgroundAverage.draw(0,0);
 		ofDrawBitmapString("Average background", 0, _height+10);
-		backgroundAverageConnectedComponents.draw(0, 
+		backgroundAverageConnectedComponents.draw(0, 20+_height);
+		ofDrawBitmapString("Average Connected Components", 0, _height+20+_height+10);
+		backgroundCodebook.draw(_width+20, 0);
+		ofDrawBitmapString("Codebook", _width+20, _height+10);
+		backgroundCodeBookConnectedComponents.draw(_width+20, 20+_height);
+		ofDrawBitmapString("Codebook Connected Components", _width+20, _height+20+_height+10);
+		
+			//old stuff from ofxCvCountourFinder
+			//	ofNoFill();
+			//	for( int i=0; i<(int)blobs.size(); i++ ) {
+			//		
