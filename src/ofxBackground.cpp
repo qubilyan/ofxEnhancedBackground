@@ -367,4 +367,21 @@ void ofxBackground::draw( float x, float y, float w, float h ) {
 			//old stuff from ofxCvCountourFinder
 			//	ofNoFill();
 			//	for( int i=0; i<(int)blobs.size(); i++ ) {
+			//		ofRect( blobs[i].boundingRect.x, blobs[i].boundingRect.y,
+			//			   blobs[i].boundingRect.width, blobs[i].boundingRect.height );
+			//	}
+			//	
+			//		// ---------------------------- draw the blobs
+			//	ofSetColor(0x00FFFF);
+			//	
+			//	for( int i=0; i<(int)blobs.size(); i++ ) {
+			//		ofNoFill();
+			//		ofBeginShape();
+			//		for( int j=0; j<blobs[i].nPts; j++ ) {
+			//			ofVertex( blobs[i].pts[j].x, blobs[i].pts[j].y );
+			//		}
+			//		ofEndShape();
 			//		
+	}	
+	glPopMatrix();
+}
