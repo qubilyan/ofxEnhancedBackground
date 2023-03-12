@@ -385,3 +385,19 @@ void ofxBackground::draw( float x, float y, float w, float h ) {
 	}	
 	glPopMatrix();
 }
+
+	//--------------------------------------------------------------------------------
+void ofxBackground::setAnchorPercent( float xPct, float yPct ){
+    anchor.x = xPct;
+    anchor.y = yPct;
+    bAnchorIsPct = true;
+}
+
+	//--------------------------------------------------------------------------------
+void ofxBackground::setAnchorPoint( int x, int y ){
+    anchor.x = x;
+    anchor.y = y;
+    bAnchorIsPct = false;
+}
+
+	//-------------------------
