@@ -29,4 +29,11 @@ public: //need all the assignment, see Chaper 13 "Using inheritance and dynamic 
     virtual void  operator = ( const ofxCvGrayscaleImage& mom );
     virtual void  operator = ( const ofxCvColorImage& mom );
     virtual void  operator = ( const ofxCvFloatImage& mom );
-  
+    virtual void  operator = ( const ofxCvShortImage& mom );
+    virtual void  operator = ( const IplImage* mom );    
+    
+		// virtual void  operator -= ( ofxCvImage& mom );                         //in base class 
+		// virtual void  operator += ( ofxCvImage& mom );                         //in base class 
+    using ofxCvImage::operator+=;  //force inheritance 
+    using ofxCvImage::operator-=;  //force inheritance    
+								   // virtual void  oper
