@@ -72,3 +72,32 @@ void ofxBackgroundCvColorImage::operator = ( const ofxCvFloatImage& _mom ) {
         setImageROI(cvGrayscaleImage, roi);
         rangeMap( mom.getCvImage(), cvGrayscaleImage,
 				 mom.getNativeScaleMin(), mom.getNativeScaleMax(), 0, 255.0f );
+		cvCvtColor( cvGrayscaleImage, cvImage, CV_GRAY2RGB );
+        flagImageChanged();
+	} else {
+        ofLog(OF_LOG_ERROR, "in =, ROI mismatch");
+	}
+}
+
+	//--------------------------------------------------------------------------------
+void ofxBackgroundCvColorImage::operator = ( const ofxCvShortImage& _mom ) {
+		// cast non-const,  no worries, we will reverse any chages
+    ofxCvShortImage& mom = const_cast<ofxCvShortImage&>(_mom);
+    if( matchingROI(getROI(), mom.getROI()) ) {
+        if( cvGrayscaleImage == NULL ) {
+            cvGrayscaleImage = cvCreateImage( cvSize(width,height), IPL_DEPTH_8U, 1 );
+        }
+        ofRectangle roi = getROI();
+        setImageROI(cvGrayscaleImage, roi);
+        rangeMap( mom.getCvImage(), cvGrayscaleImage, 0, 65535.0f, 0, 255.0f );
+		cvCvtColor( cvGrayscaleImage, cvImage, CV_GRAY2RGB );
+        flagImageChanged();
+    } else {
+        ofLog(OF_LOG_ERROR, "in =, ROI mismatch");
+    }
+}
+
+	//--------------------------------------------------------------------------------
+void ofxBackgroundCvColorImage::operator = ( const IplImage* _mom ) {
+    ofxCvImage::operator = (_mom);
+}
