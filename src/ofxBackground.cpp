@@ -400,4 +400,12 @@ void ofxBackground::setAnchorPoint( int x, int y ){
     bAnchorIsPct = false;
 }
 
-	//-------------------------
+	//--------------------------------------------------------------------------------
+void ofxBackground::resetAnchor(){
+    anchor.set(0,0);
+    bAnchorIsPct = false;
+}
+
+void ofxBackground::startLearning(){
+	timeStartedLearning = ofGetElapsedTimeMillis();
+}
