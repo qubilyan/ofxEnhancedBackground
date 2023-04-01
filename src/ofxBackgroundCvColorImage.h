@@ -36,4 +36,7 @@ public: //need all the assignment, see Chaper 13 "Using inheritance and dynamic 
 		// virtual void  operator += ( ofxCvImage& mom );                         //in base class 
     using ofxCvImage::operator+=;  //force inheritance 
     using ofxCvImage::operator-=;  //force inheritance    
-								   // virtual void  oper
+								   // virtual void  operator *= ( ofxCvImage& mom );                         //in base class 
+								   // virtual void  operator &= ( ofxCvImage& mom );                         //in base class     
+};
+#endif
