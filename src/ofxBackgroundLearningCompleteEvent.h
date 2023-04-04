@@ -4,4 +4,5 @@
 class ofxBackgroundLearningCompleteEvent : public ofEventArgs {
 public:
     
-    static ofEvent <ofxBackgroundL
+    static ofEvent <ofxBackgroundLearningCompleteEvent> events;
+};
